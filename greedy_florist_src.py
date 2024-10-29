@@ -19,3 +19,9 @@ def getMinimumCost(k, c):
         vasarlasi_kor += 1
     
     return teljes_ar
+ 
+if __name__ == "__main__":
+    n, k = map(int, input().split())  
+    c = list(map(int, input().split())) 
+
+    print(getMinimumCost(k, c))
