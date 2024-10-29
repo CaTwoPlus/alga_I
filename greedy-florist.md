@@ -1,4 +1,4 @@
-Egy baráti társaság szeretne egy csokor virágot vásárolni. A virágárus szeretné maximalizálni új vásárlói számát és a bevételét. Ehhez úgy dönt, hogy minden virág árát megszorozza az adott vásárló által korábban vásárolt virágok számával, majd hozzáad egyet. Az első virág eredeti áron lesz, (0 + 1)*eredeti ár, a következő (1 + 1)*eredeti ár, és így tovább.
+Egy baráti társaság szeretne egy csokor virágot vásárolni. A virágárus szeretné maximalizálni új vásárlói számát és a bevételét. Ehhez úgy dönt, hogy minden virág árát megszorozza az adott vásárló által korábban vásárolt virágok számával, majd hozzáad egyet. Az első virág eredeti áron lesz, (0 + 1)*eredeti ár, a következő (1 + 1) * eredeti ár, és így tovább.
 
 Adott a baráti társaság létszáma, a vásárolni kívánt virágok száma és a virágok eredeti ára. Határozd meg a minimum költséget az összes virág megvásárlásához. A kívánt virágok száma megegyezik a c tömb hosszával.
 
