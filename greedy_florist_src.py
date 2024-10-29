@@ -1,11 +1,3 @@
-#!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
 # Min koltseg szamolasa, ahol k = baratok szama, c = viragok arait tartalmazo tomb
 def getMinimumCost(k, c):
     # Csokkeno sorrendben valo rendezes segitsgevel minimalizalhato a teljes ar,
@@ -27,20 +19,3 @@ def getMinimumCost(k, c):
         vasarlasi_kor += 1
     
     return teljes_ar
-
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    nk = input().split()
-
-    n = int(nk[0])
-
-    k = int(nk[1])
-
-    c = list(map(int, input().rstrip().split()))
-
-    minimumCost = getMinimumCost(k, c)
-
-    fptr.write(str(minimumCost) + '\n')
-
-    fptr.close()

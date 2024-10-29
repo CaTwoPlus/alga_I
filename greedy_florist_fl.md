@@ -1,4 +1,6 @@
-Egy baráti társaság szeretne egy csokor virágot vásárolni. A virágárus szeretné maximalizálni új vásárlói számát és a bevételét. Ehhez úgy dönt, hogy minden virág árát megszorozza az adott vásárló által korábban vásárolt virágok számával, majd hozzáad egyet. Az első virág eredeti áron lesz, (0 + 1) * eredeti ár, a következő (1 + 1) * eredeti ár, és így tovább.
+Mohó virágárus
+
+Egy baráti társaság szeretne egy csokor virágot vásárolni. A virágárus szeretné maximalizálni új vásárlóinak számát, illetve a bevételét. Ehhez úgy dönt, hogy minden virág árát megszorozza az adott vásárló által korábban vásárolt virágok számával, majd hozzáad egyet. Az első virág eredeti áron lesz, (0 + 1) * eredeti ár, a következő (1 + 1) * eredeti ár, és így tovább.
 
 Adott a baráti társaság létszáma, a vásárolni kívánt virágok száma és a virágok eredeti ára. Határozd meg a minimum költséget az összes virág megvásárlásához. A kívánt virágok száma megegyezik a c tömb hosszával.
 
@@ -6,11 +8,9 @@ Példa
 c = [1,2,3,4]
 k = 3
 
-A  tömb hossza c = 4, így összesen 4 virágot szeretnének vásárolni. Mindegyikük eredeti áron vásárolja meg a [2,3,4] árú virágok közül az egyik virágot. Miután mindannyian vásároltak x = 1 virágot, a lista első virága, c[0], ára (jelenlegi vásárlás  +  korábbi vásárlás) * c[0]  =  (1 + 1)*1  =  2 lesz. Az összköltség tehát 2 + 3 + 4 + 2  =  11.
+A  tömb hossza c = 4, így összesen 4 virágot szeretnének vásárolni. Mindegyikük eredeti áron vásárolja meg a [2,3,4] árú virágok közül az egyik virágot. Miután mindannyian vásároltak x = 1 virágot, a lista első virága c[0], ára (jelenlegi vásárlás  +  korábbi vásárlás) * c[0]  =  (1 + 1)*1  =  2 lesz. Az összköltség tehát 2 + 3 + 4 + 2  =  11.
 
 Függvény leírása
-Töltsd ki a getMinimumCost függvényt az alábbi szerkesztőben.
-
 A getMinimumCost függvény a következő paraméterekkel rendelkezik:
 -int c[n]: minden virág eredeti ára
 -int k: a barátok száma
@@ -19,8 +19,8 @@ Visszatérési érték
 -int: a minimális költség az összes virág megvásárlásához
 
 Bemenet formátuma
-Az első sor két szóközzel elválasztott egész számot tartalmaz: n és k, a virágok és a barátok számát.
-A második sor n darab, szóközzel elválasztott pozitív egész számot tartalmaz: c[i], minden virág eredeti árát.
+Az első sor két szóközzel elválasztott egész számot tartalmaz: n és k, azaz virágok és a barátok számát.
+A második sor n darab, szóközzel elválasztott pozitív egész számot tartalmaz: c[i], azatz minden virág eredeti árát.
 
 Megkötések
 1 <= n, k <= 100
