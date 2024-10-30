@@ -15,21 +15,27 @@ def run_teszt_esetek():
     ]
     
     for i, (n, k, c, vart_eredmeny) in enumerate(teszt_esetek, 1):
-        # Elmentjuk az eredeti c listat a reszletes kiirashoz
-        eredeti_c = c.copy()
-        
-        eredmeny = getMinimumCost(k, c)
-        helyes_e = eredmeny == vart_eredmeny
-        print(f"\nTeszt #{i} eredmények:")
-        print(f"n = {n} (virágok száma)")
-        print(f"k = {k} (barátok száma)")
-        print(f"c[] = {eredeti_c}")
-        print(f"Várt eredmény: {vart_eredmeny}")
-        print(f"Kapott eredmény: {eredmeny}")
-        print(f"Helyes? {'✓' if helyes_e else '✗'}")
-        
-        if not helyes_e:
-            print(f"HIBA: Az eredmény nem egyezik! Várt: {vart_eredmeny}, Kapott: {eredmeny}")
+        try:
+            # Elmentjuk az eredeti c listat a reszletes kiirashoz
+            eredeti_c = c.copy()
+            
+            eredmeny = getMinimumCost(k, c)
+            helyes_e = eredmeny == vart_eredmeny
+            print(f"\nTeszt #{i} eredmények:")
+            print(f"n = {n} (virágok száma)")
+            print(f"k = {k} (barátok száma)")
+            print(f"c[] = {eredeti_c}")
+            print(f"Várt eredmény: {vart_eredmeny}")
+            print(f"Kapott eredmény: {eredmeny}")
+            print(f"Helyes? {'✓' if helyes_e else '✗'}")
+            
+            if not helyes_e:
+                print(f"HIBA: Az eredmény nem egyezik! Várt: {vart_eredmeny}, Kapott: {eredmeny}")
+
+        except Exception as e:
+            print(f"\nTeszt #{i} HIBA:")
+            print(f"n = {n}, k = {k}")
+            print(f"Kivétel történt: {str(e)}")
 
 if __name__ == "__main__":
     print("Mohó virágárus - Teszt esetek futtatása")
